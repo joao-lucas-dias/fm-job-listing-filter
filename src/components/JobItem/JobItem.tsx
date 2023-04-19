@@ -1,18 +1,18 @@
 import Job from "../../models/job";
+import Category from "./Category/Category";
 
 import classes from "./JobItem.module.css";
-import Tag from "./Tag/Tag";
 
 const JobItem: React.FC<{ jobData: Job }> = (props) => {
 	const generateImageName = () => {
-		return props.jobData.company.replace(/\s+/g, "-").toLowerCase();
+		return props.jobData.company.replace(/\s+/g, "-").replace(/\./g, "").toLowerCase();
 	};
 
-	let tagList: string[] = [];
-	tagList.push(props.jobData.role);
-	tagList.push(props.jobData.level);
-	props.jobData.languages.map((language) => tagList.push(language));
-	props.jobData.tools.map((tool) => tagList.push(tool));
+	let categoryList: string[] = [];
+	categoryList.push(props.jobData.role);
+	categoryList.push(props.jobData.level);
+	props.jobData.languages.map((language) => categoryList.push(language));
+	props.jobData.tools.map((tool) => categoryList.push(tool));
 
 	return (
 		<li className={`${classes.container} ${props.jobData.featured && classes.featured}`}>
@@ -24,8 +24,14 @@ const JobItem: React.FC<{ jobData: Job }> = (props) => {
 			<div className={classes.info}>
 				<p className={classes.header}>
 					<span className={classes.company}>{props.jobData.company}</span>
-					{props.jobData.new && <span className={classes.tag_new}></span>}
-					{props.jobData.featured && <span className={classes.tag_featured}></span>}
+					<div className={classes.tags}>
+						{props.jobData.new && (
+							<span className={`${classes.tag} ${classes.tag_new}`}>NEW!</span>
+						)}
+						{props.jobData.featured && (
+							<span className={`${classes.tag} ${classes.tag_featured}`}>FEATURED</span>
+						)}
+					</div>
 				</p>
 				<p className={classes.position}>{props.jobData.position}</p>
 				<p className={classes.details}>
@@ -37,9 +43,9 @@ const JobItem: React.FC<{ jobData: Job }> = (props) => {
 				</p>
 			</div>
 			<span className={classes.line}></span>
-			<ul className={classes.tag_list}>
-				{tagList.map((tag) => (
-					<Tag key={tag} label={tag} />
+			<ul className={classes.category_list}>
+				{categoryList.map((category) => (
+					<Category key={category} label={category} />
 				))}
 			</ul>
 		</li>
