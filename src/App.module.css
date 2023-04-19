@@ -1,0 +1,21 @@
+.header {
+  background-color: var(--color-primary);
+  background-image: url("./assets//images//bg-header-mobile.svg");
+  height: 150px;
+}
+
+.main {
+  position: relative;
+  padding-top: 150px;
+  background-color: var(--color-neutral-lighter);
+}
+
+.filter_wrapper {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 100px;
+  background-color: white;
+}

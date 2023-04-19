@@ -1,9 +1,14 @@
-import "./App.css";
+import classes from "./App.module.css";
+import JobsList from "./components/JobsList/JobsList";
 
 const App = () => {
 	return (
-		<div className="App">
-			<p>Hello World!</p>
+		<div className={classes.wrapper}>
+			<header className={classes.header}></header>
+			<main className={classes.main}>
+				<div className={classes.filter_wrapper}></div>
+				<JobsList />
+			</main>
 		</div>
 	);
 };
