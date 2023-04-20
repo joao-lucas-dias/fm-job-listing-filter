@@ -7,3 +7,11 @@
   color: var(--color-primary);
   background-color: var(--color-neutral-light);
 }
+
+@media (min-width: 1024px) {
+  .category:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--color-primary);
+  }
+}

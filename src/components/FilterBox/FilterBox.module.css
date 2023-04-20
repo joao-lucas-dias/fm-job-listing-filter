@@ -25,3 +25,15 @@
   border: none;
   color: var(--color-neutral-dark);
 }
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 1.5em 2.5em;
+  }
+
+  .button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--color-primary);
+  }
+}

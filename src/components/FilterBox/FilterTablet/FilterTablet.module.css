@@ -19,3 +19,10 @@
   border: none;
   background-color: var(--color-primary);
 }
+
+@media (min-width: 1024px) {
+  .button:hover {
+    cursor: pointer;
+    background-color: var(--color-neutral-darker);
+  }
+}

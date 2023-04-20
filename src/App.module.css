@@ -22,3 +22,13 @@
   display: grid;
   grid-row-gap: 2.5em;
 }
+
+@media (min-width: 1440px) {
+  .main {
+    padding: 4em 8em 8em 8em;
+  }
+
+  .job_list {
+    grid-row-gap: 1.5em;
+  }
+}
