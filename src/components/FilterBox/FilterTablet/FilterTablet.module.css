@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.label {
+  display: grid;
+  place-content: center;
+  padding: .5em;
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  background-color: var(--color-neutral-light);
+}
+
+.button {
+  padding: .5em .7em;
+  border: none;
+  background-color: var(--color-primary);
+}
