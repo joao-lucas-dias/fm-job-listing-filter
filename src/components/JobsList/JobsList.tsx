@@ -1,4 +1,4 @@
-import data from "../../../data.json";
+
 import Job from "../../models/job";
 import JobItem from "../JobItem/JobItem";
 

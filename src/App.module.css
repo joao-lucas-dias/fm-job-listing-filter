@@ -17,3 +17,8 @@
 .translate {
   transform: translateY(-90px);
 }
+
+.job_list {
+  display: grid;
+  grid-row-gap: 2.5em;
+}
