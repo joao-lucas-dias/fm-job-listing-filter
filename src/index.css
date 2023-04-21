@@ -39,6 +39,15 @@ body {
 	min-height: 100vh;
 }
 
+.attribution {
+	text-align: center;
+	padding: 1em;
+}
+
+.attribution > a {
+	color: var(--color-primary);
+}
+
 /* responsive images/videos */
 img,
 picture,
