@@ -19,7 +19,7 @@ const JobItem: React.FC<{ jobData: Job; onFilterClick: (filter: string) => void 
 		<li className={`${classes.container} ${job.tags.featured && classes.featured}`}>
 			<div className={classes.header}>
 				<img
-					src={`../../../src/assets/images/${generateImageName()}.svg`}
+					src={`/images/${generateImageName()}.svg`}
 					alt="Company Logo"
 					className={classes.logo}
 				></img>

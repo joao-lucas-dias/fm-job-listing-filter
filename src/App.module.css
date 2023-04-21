@@ -1,6 +1,6 @@
 .header {
   background-color: var(--color-primary);
-  background-image: url("./assets//images//bg-header-mobile.svg");
+  background-image: url("/images/bg-header-mobile.svg");
   height: 150px;
 }
 
@@ -24,6 +24,10 @@
 }
 
 @media (min-width: 1440px) {
+  .header {
+    background-image: url("/images/bg-header-desktop.svg");
+  }
+
   .main {
     padding: 4em 8em 8em 8em;
   }
